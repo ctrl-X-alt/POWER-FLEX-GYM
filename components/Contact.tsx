@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { GYM_DETAILS } from '../constants';
-import { MapPin, Phone, Clock, Send, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
+import { MapPin, Phone, Clock, Send, Loader2, CheckCircle2, AlertCircle, MessageCircle } from 'lucide-react';
 import AuthModal from './AuthModal';
 
 // Mock database for demonstration
@@ -113,8 +113,16 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-lg font-black uppercase italic mb-1 tracking-tight">Phone</h4>
-                <p className="text-zinc-400 text-sm">{GYM_DETAILS.phone}</p>
-                <p className="text-zinc-500 text-xs">Mon-Sun: Available via WhatsApp</p>
+                <a 
+                  href={`tel:${GYM_DETAILS.phone.replace(/\s/g, '')}`} 
+                  className="text-zinc-400 text-sm hover:text-neon transition-colors"
+                >
+                  {GYM_DETAILS.phone}
+                </a>
+                <div className="flex items-center gap-2 mt-1">
+                   <MessageCircle size={14} className="text-neon" />
+                   <p className="text-zinc-500 text-xs">Mon-Sun: Available via WhatsApp</p>
+                </div>
               </div>
             </div>
 
