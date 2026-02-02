@@ -1,0 +1,7 @@
+{
+  "name": "Power Flex Gym Al Raffa",
+  "description": "Premium fitness and sports club in Dubai featuring CrossFit, Bodybuilding, Yoga, and AI-powered fitness assistance.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
